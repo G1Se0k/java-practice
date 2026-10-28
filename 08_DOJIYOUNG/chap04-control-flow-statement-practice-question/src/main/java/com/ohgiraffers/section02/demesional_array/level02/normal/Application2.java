@@ -34,6 +34,51 @@ public class Application2 {
          * 김유신 이사부
          */
 
+        String[] chooleok = new String[]{"홍길동","이순신","유관순","윤봉길","장영실","임꺽정","장보고","이태백","김정희","대조영","김유신","이사부"};
+        System.out.println("-- 출석부 --");
+
+        for(int i=0; i<chooleok.length; i++){
+            System.out.println(i+1+". "+chooleok[i]);
+        }
+
+        String[][] boondan1 = new String[3][2];
+        String[][] boondan2 = new String[3][2];
+
+        int cursor = 0;
+
+        for(int i=0; i<3; i++){
+            for(int j=0; j<2; j++){
+                boondan1[i][j] = chooleok[cursor];
+                cursor++;
+            }
+        }
+
+        for(int i=0; i<3; i++){
+            for(int j=0; j<2; j++){
+                boondan2[i][j] = chooleok[cursor];
+                cursor++;
+            }
+        }
+
+
+
+        System.out.println(" == 1분단 ==");
+        for(int i=0; i<3; i++){
+            for(int j=0; j<2; j++){
+                System.out.print(boondan1[i][j] +" ");
+            }
+            System.out.println();
+        }
+
+
+        System.out.println(" == 2분단 ==");
+        for(int i=0; i<3; i++){
+            for(int j=0; j<2; j++){
+                System.out.print(boondan2[i][j] +" ");
+            }
+            System.out.println();
+        }
+
 
     }
 }

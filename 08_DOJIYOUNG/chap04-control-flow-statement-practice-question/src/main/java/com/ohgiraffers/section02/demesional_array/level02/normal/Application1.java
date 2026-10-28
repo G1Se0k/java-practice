@@ -1,5 +1,8 @@
 package com.ohgiraffers.section02.demesional_array.level02.normal;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class Application1 {
 
     public static void main(String[] args) {
@@ -23,6 +26,44 @@ public class Application1 {
          * W H J X
          * W S S J
          * */
+        Scanner sc = new Scanner(System.in);
+        boolean flag = true;
+        int garo =0;
+        int sero= 0;
+
+        while(flag) {
+            System.out.print("가로 행의 수를 입력하세요 : ");
+            garo = sc.nextInt();
+
+            System.out.print("세로 열의 수를 입력하세요 : ");
+            sero = sc.nextInt();
+
+            if(garo <1 || garo >10 || sero<1 || sero>10){
+                System.out.println("반드시 1~10까지의 정수를 입력해야 합니다. 다시 입력하세요.");
+            }else{
+                flag = false;
+            }
+        }
+
+        char arr[][] = new char[garo][sero];
+
+        Random random = new Random();
+
+        for(int i = 0; i<garo; i++){
+            for(int j= 0; j<sero; j++){
+                int nnn = random.nextInt(26)+65;
+                arr[i][j] = (char)nnn;
+            }
+        }
+
+        for(int i = 0; i<garo; i++){
+            for(int j= 0; j<sero; j++){
+                System.out.print(arr[i][j]);
+            }
+            System.out.println();
+        }
+
+
 
 
     }
