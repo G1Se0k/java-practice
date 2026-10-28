@@ -26,49 +26,7 @@ public class Application1 {
          * W H J X
          * W S S J
          * */
-        Scanner sc = new Scanner(System.in);
-        char c = 'A';
-        int cols = 0;
-        int rows = 0;
 
-        while(true) {
-            System.out.print("가로 행의 수를 입력하세요 : ");
-            cols = sc.nextInt();
-
-            if(cols < 1 || cols > 10){
-                System.out.println("반드시 1~10까지의 정수를 입력해야 합니다. 다시 입력하세요.");
-                System.out.println();
-            }else{
-                break;
-            }
-
-        }
-
-        while(true) {
-            System.out.print("세로 열의 수를 입력하세요 : ");
-            rows = sc.nextInt();
-
-            if(rows < 1 || rows > 10){
-                System.out.println("반드시 1~10까지의 정수를 입력해야 합니다. 다시 입력하세요.");
-                System.out.println();
-            }else{
-                break;
-            }
-
-        }
-
-        char crr[][] = new char[rows][cols];
-
-        for(int i = 0; i < crr.length; i ++){
-            for(int j = 0; j < crr[i].length; j++){
-                Random r = new Random();
-                crr[i][j] = (char)(c + r.nextInt(26));
-
-                System.out.print(crr[i][j]);
-                System.out.print(" ");
-            }
-            System.out.println();
-        }
 
     }
 }
