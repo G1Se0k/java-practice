@@ -13,5 +13,10 @@ public class Application3 {
          * ---- 출력 결과 ---
          * 남자입니다.
          * */
+char gender = 'M';
+String result = (gender == 'M')? "남자입니다." : (gender == 'F')? "여자입니다." : "이상합니다.";
+        System.out.println(result);
+
+
     }
 }
