@@ -17,5 +17,29 @@ public class Application5 {
          *	application에 i가 존재하는 위치(인덱스) : 4 8
          *	i 개수 : 2
          * */
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("문자열 : ");
+        String input = sc.nextLine();
+
+        System.out.print("문자 : ");
+        char target = sc.nextLine().charAt(0);
+
+        int inputLen = input.length();
+        int cnt =0;
+        String idxStr = "";
+
+        for(int i = 0; i<inputLen; i++){
+            if(input.charAt(i) == target){
+                idxStr+=i;
+                idxStr+=" ";
+                cnt++;
+            }
+        }
+        System.out.println(input+"에"+target+ "가 존재하는 위치(인덱스) :" +idxStr);
+        System.out.println(target+ " 개수 : "+ cnt);
+
+
     }
 }

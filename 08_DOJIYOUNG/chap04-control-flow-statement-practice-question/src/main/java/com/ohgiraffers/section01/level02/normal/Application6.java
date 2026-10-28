@@ -17,6 +17,26 @@ public class Application6 {
          * 양념치킨 배달 가능              불닭치킨은 없는 메뉴입니다.
          * */
 
+        Scanner sc = new Scanner(System.in);
+
+        String[] menu = {"양념", "불닭", "소금"};
+
+        System.out.print("치킨 이름을 입력하세요 : ");
+        String userInput = sc.nextLine();
+        boolean isok = false;
+
+        for(String m : menu){
+            if(userInput.equals(m)){
+                System.out.println(m+"치킨 배달 가능");
+                isok = true;
+            }
+        }
+
+        if(!isok){
+            System.out.println( userInput+"치킨은 없는 메뉴입니다.");
+        }
+
+
 
     }
 }

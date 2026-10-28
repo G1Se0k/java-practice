@@ -19,6 +19,26 @@ public class Application1 {
 
         /* 문자열 클래스에서 제공하는 length(), charAt() */
 
+        Scanner sc = new Scanner(System.in);
+        System.out.print("문자열을 하나 입력하세요 :");
+        String input = sc.nextLine();
+
+        System.out.print("찾을 문자를 입력하시오 :");
+        char target = sc.nextLine().charAt(0);
+
+        int inputLen = input.length();
+        int cnt =0;
+
+        for(int i = 0; i<inputLen; i++){
+            if(input.charAt(i) == target){
+                cnt++;
+            }
+        }
+
+        System.out.println("입력하신 문자열"+ input+ "에서 찾으시는 문자" +target+"은"+ cnt+"개 입니다.");
+
+
+
 
     }
 }
