@@ -26,46 +26,48 @@ public class Application1 {
          * W H J X
          * W S S J
          * */
+
         Scanner sc = new Scanner(System.in);
-        char c = 'A';
-        int cols = 0;
-        int rows = 0;
 
-        while(true) {
+        int row;
+        while(true){
             System.out.print("가로 행의 수를 입력하세요 : ");
-            cols = sc.nextInt();
+            row = sc.nextInt();
+            sc.nextLine();
 
-            if(cols < 1 || cols > 10){
+            if(row > 10 || row < 0){
                 System.out.println("반드시 1~10까지의 정수를 입력해야 합니다. 다시 입력하세요.");
-                System.out.println();
-            }else{
-                break;
+                continue;
             }
-
+            break;
         }
 
-        while(true) {
+        int col;
+        while(true){
             System.out.print("세로 열의 수를 입력하세요 : ");
-            rows = sc.nextInt();
+            col = sc.nextInt();
+            sc.nextLine();
 
-            if(rows < 1 || rows > 10){
+            if(col > 10 || col < 0){
                 System.out.println("반드시 1~10까지의 정수를 입력해야 합니다. 다시 입력하세요.");
-                System.out.println();
-            }else{
-                break;
+                continue;
             }
-
+            break;
         }
 
-        char crr[][] = new char[rows][cols];
+        char[][] charArr = new char[row][col];
 
-        for(int i = 0; i < crr.length; i ++){
-            for(int j = 0; j < crr[i].length; j++){
-                Random r = new Random();
-                crr[i][j] = (char)(c + r.nextInt(26));
+        Random rand = new Random();
 
-                System.out.print(crr[i][j]);
-                System.out.print(" ");
+        for(int i =0; i<row; i++){
+            for(int j=0;j<col;j++){
+                charArr[i][j] = (char) rand.nextInt(65,91);
+            }
+        }
+
+        for(char[] arr : charArr){
+            for(char ch : arr){
+                System.out.print(ch + " ");
             }
             System.out.println();
         }

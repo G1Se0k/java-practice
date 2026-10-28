@@ -7,13 +7,13 @@ public class Application1 {
         int[][] arr = new int[4][4];
 
         Application1 app = new Application1();
-//        app.arrayTest1(arr);
-//        app.arrayTest2(arr);
-//        app.arrayTest3(arr);
-//        app.arrayTest4(arr);
-//        app.arrayTest5(arr);
+        app.arrayTest1(arr);
+        app.arrayTest2(arr);
+        app.arrayTest3(arr);
+        app.arrayTest4(arr);
+        app.arrayTest5(arr);
         app.arrayTest6(arr);
-        //app.arrayTest7(arr);
+        app.arrayTest7(arr);
     }
 
     /**
@@ -25,14 +25,13 @@ public class Application1 {
      * @param arr
      */
     public void arrayTest1(int[][] arr) {
-
-        int k = 1;
-
-        for(int i = 0; i < arr.length; i++) {
-            for(int j = 0; j < arr[i].length; j++) {
-                arr[i][j] = k++;
+        int count = 1;
+        for(int i= 0; i < arr.length; i++){
+            for(int j=0;j<arr[i].length;j++){
+                arr[i][j] = count++;
             }
         }
+
         print(arr);
     }
 
@@ -46,10 +45,9 @@ public class Application1 {
      */
     public void arrayTest2(int[][] arr) {
 
-        int k=1;
-        for(int i = 0; i < arr.length; i++) {
-            for(int j = 0; j < arr[i].length; j++) {
-                arr[j][i] = k++;
+        for(int i= 0; i < arr.length; i++){
+            for(int j=0;j<arr[i].length;j++){
+                arr[i][j] = (i + 1) + j * arr[i].length;
             }
         }
 
@@ -65,16 +63,12 @@ public class Application1 {
      * @param arr
      */
     public void arrayTest3(int[][] arr) {
-
-        int k = 1;
-        for(int i = 0; i < arr.length; i++) {
-            for(int j = arr[i].length-1; j >= 0; j--) {
-                arr[i][j] = k++;
+        for(int i= 0; i < arr.length; i++){
+            for(int j=0;j<arr[i].length;j++){
+                arr[i][j] = (arr[i].length - j) + ((i) * arr.length);
             }
         }
-
         print(arr);
-
     }
 
     /**
@@ -87,14 +81,13 @@ public class Application1 {
      */
     public void arrayTest4(int[][] arr) {
 
-        int k = 1;
-        for(int i = arr.length-1; i >= 0; i--) {
-            for(int j = arr[i].length-1; j >= 0; j--) {
-                arr[j][i] = k++;
+        for(int i= 0; i < arr.length; i++){
+            for(int j=0;j<arr[i].length;j++){
+                int scale = arr.length * arr[i].length;
+                arr[i][j] = scale -(i + j * arr[i].length);
             }
         }
         print(arr);
-
     }
 
     /**
@@ -106,11 +99,10 @@ public class Application1 {
      * @param arr
      */
     public void arrayTest5(int[][] arr) {
-
-        int k = 1;
-        for(int i = arr.length-1; i >= 0; i--) {
-            for(int j = 0; j < arr[i].length; j++) {
-                arr[i][j] = k++;
+        for(int i= 0; i < arr.length; i++){
+            for(int j=0;j<arr[i].length;j++){
+                int scale = arr.length * arr[i].length;
+                arr[i][j] = scale - ((arr[i].length - j) + ((i) * arr.length)) + 1;
             }
         }
         print(arr);
@@ -125,11 +117,10 @@ public class Application1 {
      * @param arr
      */
     public void arrayTest6(int[][] arr) {
-
-        int k = 1;
-        for(int i = arr.length-1; i >= 0; i--) {
-            for(int j = 0; j < arr[i].length; j++ ) {
-                arr[j][i] = k++;
+        for(int i= 0; i < arr.length; i++){
+            for(int j=0;j<arr[i].length;j++){
+                int scale = arr.length * arr[i].length;
+                arr[i][j] = scale -((arr.length - i -1) + j * arr[i].length);
             }
         }
         print(arr);
@@ -145,15 +136,17 @@ public class Application1 {
      * @param arr
      */
     public void arrayTest7(int[][] arr) {
-
-        int k = 0;
-        for(int i = 0; i < arr.length; i++) {
-            for(int j = arr[i].length-1; j >= 0; j--) {
-                k++;
-                if(k % 3 == 0) continue;
-                arr[j][i] = k;
+        for(int i= 0; i < arr.length; i++){
+            for(int j=0;j<arr[i].length;j++){
+                int num = (arr.length - i) + j * arr[i].length;
+                if(num % 3 == 0){
+                    arr[i][j] = 0;
+                    continue;
+                }
+                arr[i][j] = num;
             }
         }
+
         print(arr);
     }
 
@@ -162,7 +155,6 @@ public class Application1 {
      * @param arr
      */
     public void print(int[][] arr) {
-
         for(int i = 0; i < arr.length; i++) {
             for(int j = 0; j < arr[i].length; j++) {
                 System.out.print(arr[i][j] + " ");

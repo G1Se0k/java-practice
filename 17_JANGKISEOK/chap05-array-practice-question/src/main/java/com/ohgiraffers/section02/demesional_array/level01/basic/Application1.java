@@ -15,18 +15,22 @@ public class Application1 {
          *
          * 단, 출력물의 줄맞춤은 신경쓰지 말고 풀어보세요
          * */
-        int iarr[][] = new int[3][4];
 
-        int su = 1;
-        for(int i = 0; i < iarr.length; i++) {
-            for(int j = 0; j < iarr[i].length; j++) {
-                iarr[i][j] = su++;
+        int row = 3;
+        int col = 4;
+
+        int[][] numbers = new int[row][col];
+
+        int count = 1;
+        for(int i = 0; i < row; i++ ){
+            for(int j = 0; j < col; j++){
+                numbers[i][j] = count++;
             }
         }
 
-        for(int i = 0; i < iarr.length; i++) {
-            for(int j = 0; j < iarr[i].length; j++) {
-                System.out.print(iarr[i][j] + "  ");
+        for(int[] iArr : numbers){
+            for(int i : iArr){
+                System.out.print(i + " ");
             }
             System.out.println();
         }
