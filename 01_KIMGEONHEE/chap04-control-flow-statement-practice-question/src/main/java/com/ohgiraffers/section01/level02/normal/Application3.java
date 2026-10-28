@@ -25,5 +25,23 @@ public class Application3 {
          * 양수 혹은 홀수만 입력해야 합니다.
          */
 
+        Scanner sc =new Scanner(System.in);
+        System.out.print("홀수인 양의 정수를 입력하세요 : ");
+        int num = sc.nextInt();
+        if(num%2==0 || num<0){
+            System.out.println("양수 혹은 홀수만 입력해야 합니다.");
+        } else{
+            int[] arr=new int[num];
+            for(int i=0; i<num; i++){
+                if(i<=num/2){
+                    arr[i]=i+1;
+                } else{
+                    arr[i]=arr[i-1]-1;
+                }
+            }
+            for(int i=0; i<num; i++){
+                System.out.print(arr[i]+" ");
+            }
+        }
     }
 }

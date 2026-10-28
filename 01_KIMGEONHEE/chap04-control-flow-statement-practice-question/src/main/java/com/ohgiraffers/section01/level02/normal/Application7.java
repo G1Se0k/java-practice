@@ -14,5 +14,22 @@ public class Application7 {
          * 최대값 : 10
          * 최소값 : 2
          * */
+
+        int[] arr = new int[10];
+        for(int i=0; i<10; i++){
+            int ran=(int)((Math.random()*10)+1);
+            arr[i]=ran;
+        }
+
+        int max=0;
+        int min=10;
+        for(int i=0; i<10; i++){
+            if(arr[i]>max)max=arr[i];
+            if(arr[i]<min)min=arr[i];
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println("");
+        System.out.println("최대값: "+max);
+        System.out.println("최소값: "+min);
     }
 }
