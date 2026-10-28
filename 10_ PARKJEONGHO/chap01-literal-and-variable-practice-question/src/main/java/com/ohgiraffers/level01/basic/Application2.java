@@ -13,6 +13,11 @@ public class Application2 {
          * 둘레 : 97.8
          *  */
 
+        double 너비 = 12.5;
+        double 높이 = 36.4;
+
+        System.out.println("면적 = " + (너비 * 높이));
+        System.out.println("둘레 = " + (2 * (너비 + 높이)));
 
     }
 }
