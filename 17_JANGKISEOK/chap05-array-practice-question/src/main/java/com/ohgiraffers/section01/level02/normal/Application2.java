@@ -16,5 +16,26 @@ public class Application2 {
          * 990101-1******
          */
 
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("주민등록번호를 입력하세요 : ");
+        String input = sc.nextLine();
+
+        char[] id = new char[14];
+
+        for(int i=0; i<id.length; i++){
+            id[i] = input.charAt(i);
+        }
+
+        for (int i=0;i<id.length;i++){
+
+            if(i > 7){
+                System.out.print('*');
+                continue;
+            }
+            System.out.print(id[i]);
+        }
+        System.out.println();
+
     }
 }

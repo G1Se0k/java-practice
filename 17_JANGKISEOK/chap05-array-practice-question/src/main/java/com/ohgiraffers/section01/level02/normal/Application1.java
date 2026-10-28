@@ -20,7 +20,27 @@ public class Application1 {
         /* 문자열 클래스에서 제공하는 length(), charAt() */
 
         Scanner sc = new Scanner(System.in);
-        String input = sc.next();
+        System.out.print("문자열을 하나 입력하세요 : ");
+        String input = sc.nextLine();
+
+        System.out.print("검색하실 문자 하나 입력하세요 : ");
+        char searchInput = sc.next().charAt(0);
+        sc.nextLine();
+
+        char[] charArr = new char[input.length()];
+
+        for(int i=0; i< charArr.length; i++){
+            charArr[i] = input.charAt(i);
+        }
+
+        int count = 0;
+        for(char c : charArr){
+            if (c == searchInput) count++;
+        }
+
+        System.out.println("입력하신 문자열 " + input + "에서 찾으시는 문자 " + searchInput + "은 " +count+"개 입니다.");
+
+
 
     }
 }
