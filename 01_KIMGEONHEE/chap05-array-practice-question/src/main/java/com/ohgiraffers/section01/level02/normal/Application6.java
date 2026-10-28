@@ -18,5 +18,21 @@ public class Application6 {
          * */
 
 
+        String sarr[] = new String[]{"후라이드","양념","간장","치즈","바베큐"};
+        Scanner sc = new Scanner(System.in);
+        System.out.print("치킨 이름을 입력하세요 : ");
+        String menu = sc.nextLine();
+
+        int count=0;
+        for(int i=0; i<sarr.length;i++){
+            if(sarr[i].equals(menu)){
+                System.out.println(menu+"치킨 배달 가능");
+                count++;
+            }
+        }
+        if(count==0){
+            System.out.println(menu+"치킨은 없는 메뉴입니다.");
+        }
+
     }
 }

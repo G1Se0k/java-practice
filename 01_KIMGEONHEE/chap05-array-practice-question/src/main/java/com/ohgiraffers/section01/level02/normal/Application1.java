@@ -20,5 +20,24 @@ public class Application1 {
         /* 문자열 클래스에서 제공하는 length(), charAt() */
 
 
+        Scanner sc = new Scanner(System.in);
+        System.out.print("문자열을 하나 입력하세요 : ");
+        String str=sc.nextLine();
+        char carr[]=new char[str.length()];
+
+        for(int i=0; i<str.length();i++){
+            carr[i]=str.charAt(i);
+        }
+        System.out.print("찾으실 문자를 입력하세요 : ");
+        char ch = sc.next().charAt(0);
+
+        int count=0;
+        for(int i=0; i<str.length();i++){
+            if(carr[i]==ch)
+                count++;
+
+        }
+        System.out.println("입력하신 문자열 "+str+"에서 찾으시는 문자 "+ch+"은 "+count+"개 입니다.");
+
     }
 }

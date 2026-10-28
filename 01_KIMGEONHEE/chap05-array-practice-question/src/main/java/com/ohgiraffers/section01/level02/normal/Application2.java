@@ -16,5 +16,19 @@ public class Application2 {
          * 990101-1******
          */
 
+        Scanner sc = new Scanner(System.in);
+        System.out.print("주민번호를 입력하세요 : ");
+        String str = sc.nextLine();
+        char[] carr = new char[14];
+        for(int i=0; i<14;i++){
+            if(i<8){
+                carr[i]=str.charAt(i);
+            } else{
+                carr[i]='*';
+            }
+        }
+        for(int i=0; i<carr.length;i++){
+            System.out.print(carr[i]);
+        }
     }
 }

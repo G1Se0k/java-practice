@@ -27,6 +27,50 @@ public class Application1 {
          * W S S J
          * */
 
+        Scanner sc = new Scanner(System.in);
+        int row;
+        int col;
+
+        while(true){
+            System.out.print("가로 행의 수를 입력하세요 : ");
+            row=sc.nextInt();
+
+            if(row<1||row>10){
+                System.out.print("반드시 1~10까지의 정수를 입력해야 합니다. 다시 입력하세요.");
+                System.out.println("");
+            } else{
+                break;
+            }
+        }
+
+        while(true){
+            System.out.print("세로 행의 수를 입력하세요 : ");
+            col=sc.nextInt();
+
+            if(col<1||col>10){
+                System.out.print("반드시 1~10까지의 정수를 입력해야 합니다. 다시 입력하세요.");
+                System.out.println("");
+            } else{
+                break;
+            }
+        }
+
+        char carr[][]=new char[row][col];
+
+        for(int i=0; i<row; i++){
+            for(int j=0; j<col; j++){
+                int ran = (int)((Math.random()*26)+65);
+                carr[i][j]=(char)ran;
+            }
+        }
+
+        for(int i=0; i<row; i++){
+            for(int j=0; j<col; j++){
+                System.out.print(carr[i][j]+" ");
+            }
+            System.out.println("");
+        }
+
 
     }
 }

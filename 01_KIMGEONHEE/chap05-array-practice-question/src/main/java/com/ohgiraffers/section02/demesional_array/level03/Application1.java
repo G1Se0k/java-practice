@@ -3,6 +3,16 @@ package com.ohgiraffers.section02.demesional_array.level03;
 public class Application1 {
 
     public static void main(String[] args) {
+        int[][] arr = new int[4][4];
+
+        Application1 app = new Application1();
+//       app.arrayTest1(arr);
+//        app.arrayTest2(arr);
+//        app.arrayTest3(arr);
+//        app.arrayTest4(arr);
+//        app.arrayTest5(arr);
+//          app.arrayTest6(arr);
+        app.arrayTest7(arr);
 
 
     }
@@ -17,6 +27,15 @@ public class Application1 {
      */
     public void arrayTest1(int[][] arr) {
 
+        int num=1;
+        for(int i=0; i<arr.length; i++){
+            for(int j=0; j<arr[i].length; j++){
+                arr[i][j]=num;
+                num++;
+            }
+        }
+
+        print(arr);
 
     }
 
@@ -30,6 +49,17 @@ public class Application1 {
      */
     public void arrayTest2(int[][] arr) {
 
+        int num=1;
+        for(int i=0; i<arr.length; i++){
+            for(int j=0; j<arr[i].length; j++){
+                arr[j][i]=num;
+                num++;
+            }
+
+        }
+
+        print(arr);
+
 
     }
 
@@ -42,6 +72,16 @@ public class Application1 {
      * @param arr
      */
     public void arrayTest3(int[][] arr) {
+
+        int num=1;
+        for(int i=0; i<arr.length; i++){
+            for(int j=arr[i].length-1; j>=0; j--){
+                arr[i][j]=num;
+                num++;
+            }
+        }
+
+        print(arr);
 
 
 
@@ -57,6 +97,15 @@ public class Application1 {
      */
     public void arrayTest4(int[][] arr) {
 
+        int num=1;
+        for(int i=arr.length-1; i>=0; i--){
+            for(int j=arr[i].length-1; j>=0; j--){
+                arr[j][i]=num;
+                num++;
+            }
+        }
+
+        print(arr);
 
 
     }
@@ -70,6 +119,15 @@ public class Application1 {
      * @param arr
      */
     public void arrayTest5(int[][] arr) {
+        int num=1;
+        for(int i=arr.length-1; i>=0; i--){
+            for(int j=0; j<arr[i].length; j++){
+                arr[i][j]=num;
+                num++;
+            }
+        }
+
+        print(arr);
 
 
     }
@@ -83,6 +141,15 @@ public class Application1 {
      * @param arr
      */
     public void arrayTest6(int[][] arr) {
+        int num=1;
+        for(int i=arr.length-1; i>=0; i--){
+            for(int j=0; j<arr[i].length; j++){
+                arr[j][i]=num;
+                num++;
+            }
+        }
+
+        print(arr);
 
 
     }
@@ -97,6 +164,19 @@ public class Application1 {
      * @param arr
      */
     public void arrayTest7(int[][] arr) {
+        int num=1;
+        for(int i=0; i<arr.length; i++){
+            for(int j=arr.length-1; j>=0; j--){
+                if(num%3==0) {
+                    num++;
+                    continue;
+                } else{
+                arr[j][i]=num;
+                num++;}
+            }
+        }
+
+        print(arr);
 
 
     }
@@ -107,6 +187,12 @@ public class Application1 {
      */
     public void print(int[][] arr) {
 
+        for(int i=0; i<arr.length; i++){
+            for(int j=0; j<arr[i].length; j++){
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println("");
+        }
 
     }
 }
