@@ -1,5 +1,6 @@
 package com.ohgiraffers.section01.level02.normal;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Application1 {
@@ -18,6 +19,10 @@ public class Application1 {
          * */
 
         /* 문자열 클래스에서 제공하는 length(), charAt() */
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        char[] carr = new char[s.length()];
+
 
 
     }
