@@ -41,6 +41,5 @@ public class Application {
         System.out.println(employeeDTO.getBonusPoint());
         System.out.println(employeeDTO.getPhone());
         System.out.println(employeeDTO.getAddress());
-    int a = Integer.parseInt("35");
     }
 }
