@@ -12,6 +12,18 @@ public class Application2 {
          * 평균 : 67
          *  */
 
+        double 국어 = 80.5;
+        double 수학 = 50.6;
+        double 영어 = 70.8;
+
+        int sum = ((int) (국어 + 수학 + 영어));
+        int average = (int) (sum / 3);
+
+        System.out.println("총점 = " + sum);
+        System.out.println("평균 = " + average);
+
+
+
 
     }
 }

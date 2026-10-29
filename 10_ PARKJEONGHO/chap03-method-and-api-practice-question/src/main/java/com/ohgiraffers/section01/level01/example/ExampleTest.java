@@ -1,5 +1,7 @@
 package com.ohgiraffers.section01.level01.example;
 
+import java.util.Scanner;
+
 public class ExampleTest {
 
     /*
@@ -13,6 +15,7 @@ public class ExampleTest {
 
     홀수입니다
     * */
+
 
     /*
     * 메소드명 : findMax(int first, int second)
