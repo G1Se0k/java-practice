@@ -11,6 +11,10 @@ public class Application1 {
          * 문자 a의 unicode : 97
          * */
 
+        char ch = 'a';
+        int a = ch;
+
+        System.out.println("문자 a의 unicode : = " + a);
 
     }
 }
