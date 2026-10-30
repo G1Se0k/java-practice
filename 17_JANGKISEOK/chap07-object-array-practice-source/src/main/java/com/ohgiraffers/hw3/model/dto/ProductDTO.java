@@ -24,4 +24,28 @@ public class ProductDTO {
                 "가격 : " + price + "원, " +
                 "세율 : " + (tax * 100) + "%";
     }
+
+    public void setPid(int pid) {
+        this.pid = pid;
+    }
+
+    public void setPName(String pName) {
+        this.pName = pName;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setTax(double tax) {
+        this.tax = tax;
+    }
+
+    public int getPid() {
+        return pid;
+    }
+
+    public String getPName() {
+        return pName;
+    }
 }
