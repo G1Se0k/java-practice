@@ -17,4 +17,16 @@ public class PersonDTO {
     public String information(){
         return "";
     }
+
+    public int getAge() {
+        return age;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
 }
