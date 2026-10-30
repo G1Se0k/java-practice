@@ -22,18 +22,6 @@ public class Application2 {
          * -- 출력 예시 --
          * 바나나의 가격은 3000원 입니다.
          * */
-        Scanner sc = new Scanner(System.in);
-        System.out.print("과일 이름을 입력하세요: ");
-        String str = sc.nextLine();
-        if (str.equals("사과")) System.out.println(str + ": 1000원");
-        else if (str.equals("바나나")) {
-            System.out.println(str + ": 3000원");
-        } else if (str.equals("복숭아")) {
-            System.out.println(str + ": 2000원");
-        } else if (str.equals("키위")) {
-            System.out.println(str + ": 5000원");
-        } else {
-            System.out.println("준비된 상품이 없습니다.");
-        }
+
     }
 }

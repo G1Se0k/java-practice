@@ -16,12 +16,5 @@ public class Application3 {
         * ---출력----
         * 남자 입니다
         * */
-        Scanner sc = new Scanner(System.in);
-        System.out.print("주민등록번호를 입력해주세요(- 포함): ");
-        char ch = sc.nextLine().charAt(7);
-        System.out.println("ch = " + ch);
-        System.out.println();
-        System.out.println((ch == '1') ? "남자 입니다" : "여자 입니다");
-
     }
 }

@@ -16,15 +16,6 @@ public class Application5 {
         * 1인당 사탕 개수 : 3
         * 남는 사탕 개수 : 13
         * */
-        Scanner sc = new Scanner(System.in);
-        System.out.print("인원 수를 입력하세요: ");
-        int count1 = sc.nextInt();
-        System.out.print("사탕 수를 입력하세요: ");
-        int count2 = sc.nextInt();
 
-        int per_person = count2 / count1;
-        int remainder = count2 % count1;
-        System.out.println("1인당 사탕 개수 : " +per_person);
-        System.out.println("남는 사탕 개수 : " + remainder);
     }
 }

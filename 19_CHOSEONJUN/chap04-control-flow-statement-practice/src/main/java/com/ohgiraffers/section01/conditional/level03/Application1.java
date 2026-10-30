@@ -18,35 +18,5 @@ public class Application1 {
          * -- 출력 예시 --
          * 4 + 3 = 7
          */
-        Scanner sc = new Scanner(System.in);
-        int num1 = 0, num2 = 0;
-        System.out.print("첫 번째 정수 : ");
-        num1 = sc.nextInt();
-        System.out.print("\n두 번째 정수 : ");
-        num2 = sc.nextInt();
-        System.out.println();
-        System.out.println("연산 기호를 입력하세요 : ");
-        String str = sc.nextLine();
-
-        char ch = sc.next().charAt(0);
-        switch (ch) {
-            case '+':
-                System.out.println(num1 + " + " + num2 + "= " + (num1 + num2));
-                break;
-            case '-':
-                System.out.println(num1 + " - " + num2 + "= " + (num1 - num2));
-                break;
-            case '*':
-                System.out.println(num1 + " * " + num2 + "= " + (num1 * num2));
-                break;
-            case '/':
-                System.out.println(num1 + " / " + num2 + "= " + (num1 / num2));
-                break;
-            case '%':
-                System.out.println(num1 + " % " + num2 + "= " + (num1 % num2));
-                break;
-            default:
-                System.out.println("입력하신 연산은 없습니다. 프로그램을 종료합니다.");
-        }
     }
 }
