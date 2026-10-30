@@ -59,6 +59,7 @@ public class Application {
             char input = sc.next().charAt(0);
             sc.nextLine();
 
+            System.out.println("\n========== 사원 정보 ==========");
             if(!(input == 'y' || input == 'Y')) break;
             if(count > 9){
                 System.out.println("사원 DB가 가득 차 입력을 종료합니다.");
