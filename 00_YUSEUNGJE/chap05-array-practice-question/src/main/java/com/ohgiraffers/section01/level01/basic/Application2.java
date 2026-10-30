@@ -25,6 +25,10 @@ public class Application2 {
          * -- 출력 예시 --
          * 준비된 과일이 없습니다.
          * */
+        Scanner sc = new Scanner(System.in);
+
+
+        String sarr1[]= {"딸기", "바나나", "복숭아", "키위", "사과"};
 
 
     }
