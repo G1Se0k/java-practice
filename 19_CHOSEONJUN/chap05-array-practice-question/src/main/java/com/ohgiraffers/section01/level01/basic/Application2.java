@@ -29,10 +29,34 @@ public class Application2 {
         Scanner sc = new Scanner(System.in);
         System.out.print("0부터 4까지의 정수를 입력하세요: ");
         int input = sc.nextInt();
-        if (input >= 0 && 5 > input){
+        if (input >= 0 && 5 > input) {
             System.out.println(arrStr[input]);
-        }else {
+        } else {
             System.out.println("준비된 과일이 없습니다.");
+        }
+        test(input, arrStr);
+
+    }
+
+    public static void test(int input, String[] arr) {
+        switch (input) {
+            case 0:
+                System.out.println(arr[input]);
+                break;
+            case 1:
+                System.out.println(arr[input]);
+                break;
+            case 2:
+                System.out.println(arr[input]);
+                break;
+            case 3:
+                System.out.println(arr[input]);
+                break;
+            case 4:
+                System.out.println(arr[input]);
+                break;
+            default:
+                System.out.println("준비된 과일이 없습니다.");
         }
     }
 }

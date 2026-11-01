@@ -11,7 +11,7 @@ public class Application {
         // 객체배열을 크기 3으로 할당 한 뒤 3개의 생성자를 각각 이용하여 객체 생성 후 출력
         employeeDTOSArr[0] = new EmployeeDTO();
         employeeDTOSArr[1] = new EmployeeDTO(1, "홍길동", 19, 'M', "01022223333", "서울 잠실");
-        employeeDTOSArr[2] = new EmployeeDTO(2, "강말순", "교육부", "강사", 20, 'F', 1000000, 0.1, "01011112222", "서울 마곡");
+        employeeDTOSArr[2] = new EmployeeDTO(2, "강말순", "교육부", "강사", 20, 'F', 1000000, 0.01, "01011112222", "서울 마곡");
         for (int i = 0; i < employeeDTOSArr.length; i++) {
             System.out.println("emp[" + i + "] : " + employeeDTOSArr[i].information());
         }
@@ -27,11 +27,13 @@ public class Application {
         // 연봉 = (급여 + (급여 * 보너스포인트)) * 12
         int sum = 0;
         for (int i = 0; i < employeeDTOSArr.length; i++) {
-            System.out.println(employeeDTOSArr[i].getEmpName() + "의 연봉 : " + (int) (employeeDTOSArr[i].getSalary() + (employeeDTOSArr[i].getSalary() * employeeDTOSArr[i].getBonusPoint())) * 12+"원");
-            sum += (int) (employeeDTOSArr[i].getSalary() + (employeeDTOSArr[i].getSalary() * employeeDTOSArr[i].getBonusPoint())) * 12;
+            int sumSalary = (int) (employeeDTOSArr[i].getSalary() + (employeeDTOSArr[i].getSalary() * employeeDTOSArr[i].getBonusPoint())) * 12;
+            System.out.println(employeeDTOSArr[i].getEmpName() + "의 연봉 : " + sumSalary+"원");
+//            sum += (int) (employeeDTOSArr[i].getSalary() + (employeeDTOSArr[i].getSalary() * employeeDTOSArr[i].getBonusPoint())) * 12;
+            sum += sumSalary;
         }
         System.out.println("=================================================================");
-        System.out.println("직원들의 연봉의 평균 : " + (sum / employeeDTOSArr.length));
+        System.out.println("직원들의 연봉의 평균 : " + (sum / employeeDTOSArr.length)+"원");
     }
 
 }

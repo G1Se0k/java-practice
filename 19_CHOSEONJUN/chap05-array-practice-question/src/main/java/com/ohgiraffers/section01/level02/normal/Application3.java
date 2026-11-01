@@ -28,22 +28,21 @@ public class Application3 {
         System.out.print("홀수인 양의 정수를 입력하세요 : ");
         int nextInt = sc.nextInt();
         sc.nextLine();
-        if (((0 > nextInt) || nextInt % 2 == 0)) {
+        int cnt = 0;
+        if (nextInt % 2 == 1) {
+            int[] arrInt = new int[nextInt];
+            for (int i = 0; i <= arrInt.length / 2; i++) {
+                arrInt[i] = ++cnt;
+            }
+            cnt = arrInt[arrInt.length / 2];
+            for (int i = (arrInt.length / 2) + 1; i < arrInt.length; i++) {
+                arrInt[i] = --cnt;
+            }
+            for (int i : arrInt) {
+                System.out.print(i + " ");
+            }
+        } else {
             System.out.println("양수 혹은 홀수만 입력해야 합니다.");
-            return;
         }
-        int[] arrInt = new int[nextInt];
-        for (int i = 0; i <= arrInt.length / 2; i++) {
-            arrInt[i] = i + 1;
-        }
-        int down = arrInt[arrInt.length / 2];
-        for (int i = (arrInt.length / 2) + 1; i < arrInt.length; i++) {
-            arrInt[i] = --down;
-        }
-        for (int i : arrInt) {
-            System.out.print(i + " ");
-        }
-
-
     }
 }

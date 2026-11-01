@@ -10,6 +10,7 @@ public class Application {
         System.out.println("name: "+ memberDTO.getName());
         System.out.println("age: "+ memberDTO.getAge());
         System.out.println("gender: "+ memberDTO.getGenger());
+        System.out.println("phone: " + memberDTO.getPhone());
         System.out.println("email: "+ memberDTO.getEmail());
         memberDTO.setId("user01");
         memberDTO.setPwd("pass01");
@@ -23,6 +24,7 @@ public class Application {
         System.out.println("변경 후 name: "+ memberDTO.getName());
         System.out.println("변경 후 age: "+ memberDTO.getAge());
         System.out.println("변경 후 gender: "+ memberDTO.getGenger());
+        System.out.println("변경 후 phone: "+ memberDTO.getPhone());
         System.out.println("변경 후 email: "+ memberDTO.getEmail());
 
     }

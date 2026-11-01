@@ -12,7 +12,7 @@ public class Application1 {
             arr[i] = i + 1;
         }
         for (int i = 0; i < arr.length; i++) {
-            System.out.println("arr["+i+"] = " +arr[i]);
+            System.out.println("arr[" + i + "] = " + arr[i]);
         }
     }
 }

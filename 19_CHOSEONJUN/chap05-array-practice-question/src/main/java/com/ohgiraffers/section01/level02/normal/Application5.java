@@ -30,9 +30,11 @@ public class Application5 {
         char ch = sc.next().charAt(0);
         int count = 0;
         int[] indexSearch;
+        String strIndex = "";
         for (int i = 0; i < num; i++) {
-            if (ch == arrChar[i]) {
+            if (ch == arrChar[i]) { // 입력문자 와 arrChar배열 문자와 일치 한 index 값[i] >> 문자열에 추가.
                 count++;
+                strIndex += i + " ";
             }
         }
         indexSearch = new int[count];
@@ -45,7 +47,7 @@ public class Application5 {
         }
 
         System.out.println(str + "에 " + ch + "가 존재하는 위치(인덱스) : " + Arrays.toString(indexSearch));
-        System.out.println(ch+" 개수 : "+count);
-
+        System.out.println("위치(인덱스)" + strIndex);
+        System.out.println(ch + " 개수 : " + count);
     }
 }

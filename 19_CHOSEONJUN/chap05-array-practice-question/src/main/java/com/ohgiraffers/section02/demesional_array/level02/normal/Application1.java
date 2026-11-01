@@ -27,20 +27,37 @@ public class Application1 {
          * W S S J
          * */
         Scanner sc = new Scanner(System.in);
-        System.out.print("가로 행의 수를 입력하세요 : ");
-        int row = sc.nextInt();
-        System.out.print("세로 열의 수를 입력하세요 : ");
-        int column = sc.nextInt();
+        int row = 0;
+        while (true) {
+            System.out.print("가로 행의 수를 입력하세요 : ");
+            row = sc.nextInt();
+            if (row < 1 || row > 10) {
+                System.out.println("반드시 1~10까지의 정수를 입력해야 합니다. 다시 입력하세요. ");
+            } else {
+                break;  //입력시 종료
+            }
+        }
+        int column = 0;
+        while (true) {
+            System.out.print("세로 열의 수를 입력하세요 : ");
+            column = sc.nextInt();
+            if (column < 1 || column > 10) {
+                System.out.println("반드시 1~10까지의 정수를 입력해야 합니다. 다시 입력하세요.");
+            } else {
+                break;
+            }
+
+        }
+
+
         char[][] arrInt = new char[row][column];
         for (int i = 0; i < arrInt.length; i++) {
             for (int j = 0; j < arrInt[i].length; j++) {
                 char randomChar = (char) ((int) (Math.random() * 26) + 'A'); // 65~95
                 arrInt[i][j] = randomChar;
-                System.out.print(arrInt[i][j]+ " ");
+                System.out.print(arrInt[i][j] + " ");
             }
             System.out.println();
         }
-
-
     }
 }

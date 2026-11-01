@@ -30,7 +30,7 @@ public class Application5_5 {
          * */
 
 
-        print();
+        print2();
 
     }
 
@@ -40,27 +40,32 @@ public class Application5_5 {
         }
     }
 
-    public static void print(){
+    public static void print() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("정수 하나를 입력하세요 : ");
-
+        System.out.print("정수 하나를 입력하세요: ");
         int num = sc.nextInt();
-        int value = 0;
-
+        int left = 0;   // 왼쪽 숫자: 1, 12, 123, ...
+        int right = 0;  // 오른쪽 결과: 9, 98, 987, ...
         for (int i = 1; i <= num; i++) {
-            // 숫자를 왼쪽부터 하나씩 누적
-            value = value * 10 + i;
-            // 앞쪽 공백 출력
-            for (int j = 1; j <= num - i; j++) {
-                System.out.print(" ");
+            // 왼쪽 숫자 만들기
+            // 0 * 10 + 1 = 1(value)
+            // 1 * 10 + 2 = 12(value)
+            // 12 * 10 + 3 = 123(value)
+            // 123 * 10 +4 = 1234
+            left = left * 10 + i;
+            // 오른쪽 결과 계산하기
+            right = left * 8 + i;
+            for (int j = 1; j <= num - i; j++) { // 앞쪽 공백 출력
+                System.out.print(" "); // 첫 문장 출력 >> 범위 num - i(1)
             }
-            // 계산 결과 출력
-            System.out.println(value + " x 8 + " + i + " = " + (value * 8 + i));
+            // 12 * 8 + 2
+            // 123 * 8 + 3
+            System.out.println(left + " x 8 + " + i + " = " + right);
         }
         sc.close();
     }
 
-    public static void print2(){
+    public static void print2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("피라미드 높이를 입력하세요: ");
         int n = scanner.nextInt();

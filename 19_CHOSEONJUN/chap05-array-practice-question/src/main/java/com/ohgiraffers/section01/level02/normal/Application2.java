@@ -19,18 +19,18 @@ public class Application2 {
         System.out.print("주민등록번호를 입력하세요 : ");
         String str = sc.nextLine();
         int index = -1;
+        boolean onoff = false; //찾았을 때 스위치
         char[] arrChar = str.toCharArray();
         for (int i = 0; i < arrChar.length; i++) {
             if (arrChar[i] == '-') {
                 index = i;
+                onoff = true;
             }
+            if (onoff) {
+                if (index + 2 <= i)
+                    arrChar[i] = '*';
+            }
+            System.out.print(arrChar[i]);
         }
-        for (int i = index + 2; i < arrChar.length; i++) {
-            arrChar[i] = '*';
-        }
-        for (char c : arrChar) {
-            System.out.print(c);
-        }
-
     }
 }

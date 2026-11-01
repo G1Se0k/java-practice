@@ -3,8 +3,21 @@ package com.ohgiraffers.section02.demesional_array.level03;
 public class Application1 {
 
     public static void main(String[] args) {
-
-
+        int[][] arr = new int[4][4];
+        System.out.println("arrayTest1");
+        arrayTest1(arr);
+        System.out.println("arrayTest2");
+        arrayTest2(arr);
+        System.out.println("arrayTest3");
+        arrayTest3(arr);
+        System.out.println("arrayTest4");
+        arrayTest4(arr);
+        System.out.println("arrayTest5");
+        arrayTest5(arr);
+        System.out.println("arrayTest6");
+        arrayTest6(arr);
+        System.out.println("arrayTest7");
+        arrayTest7(arr);
     }
 
     /**
@@ -15,9 +28,14 @@ public class Application1 {
      *
      * @param arr
      */
-    public void arrayTest1(int[][] arr) {
-
-
+    public static void arrayTest1(int[][] arr) {
+        int k = 1;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                arr[i][j] = k++;
+            }
+        }
+        print(arr);
     }
 
     /**
@@ -28,9 +46,14 @@ public class Application1 {
      *
      * @param arr
      */
-    public void arrayTest2(int[][] arr) {
-
-
+    public static void arrayTest2(int[][] arr) {
+        int k = 1;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                arr[j][i] = k++;
+            }
+        }
+        print(arr);
     }
 
     /**
@@ -41,10 +64,14 @@ public class Application1 {
      *
      * @param arr
      */
-    public void arrayTest3(int[][] arr) {
-
-
-
+    public static void arrayTest3(int[][] arr) {
+        int k = 1;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = arr[i].length - 1; j >= 0; j--) { //각 배열 요소의 끝 번호 부터 시작.
+                arr[i][j] = k++;
+            }
+        }
+        print(arr);
     }
 
     /**
@@ -55,9 +82,14 @@ public class Application1 {
      *
      * @param arr
      */
-    public void arrayTest4(int[][] arr) {
-
-
+    public static void arrayTest4(int[][] arr) {
+        int k = 1;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = arr[i].length - 1; j >= 0; j--) {
+                arr[j][i] = k++;
+            }
+        }
+        print(arr);
 
     }
 
@@ -69,9 +101,14 @@ public class Application1 {
      *
      * @param arr
      */
-    public void arrayTest5(int[][] arr) {
-
-
+    public static void arrayTest5(int[][] arr) {
+        int k = 1;
+        for (int i = arr.length - 1; i >= 0; i--) {
+            for (int j = 0; j < arr[i].length; j++) {
+                arr[i][j] = k++;
+            }
+        }
+        print(arr);
     }
 
     /**
@@ -82,9 +119,14 @@ public class Application1 {
      *
      * @param arr
      */
-    public void arrayTest6(int[][] arr) {
-
-
+    public static void arrayTest6(int[][] arr) {
+        int k = 1;
+        for (int i = arr.length - 1; i >= 0; i--) {
+            for (int j = 0; j < arr[i].length; j++) {
+                arr[j][i] = k++;
+            }
+        }
+        print(arr);
     }
 
     /**
@@ -92,21 +134,33 @@ public class Application1 {
      * 0 7 11 0
      * 2 0 10 14
      * 1 5 0 13
+     * <p>
+     * 3의 배수인 경우 continue;
      *
-     *  3의 배수인 경우 continue;
      * @param arr
      */
-    public void arrayTest7(int[][] arr) {
-
-
+    public static void arrayTest7(int[][] arr) {
+        int k = 0;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = arr[i].length - 1; j >= 0; j--) {
+                k++;
+                if (k % 3 == 0) continue;
+                arr[j][i] = k;
+            }
+        }
+        print(arr);
     }
 
     /***
      * 이차원 배열을 전달받아서 출력하는 메소드
      * @param arr
      */
-    public void print(int[][] arr) {
-
-
+    public static void print(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }

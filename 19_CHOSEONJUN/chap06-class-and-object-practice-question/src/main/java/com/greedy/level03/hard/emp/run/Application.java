@@ -16,7 +16,7 @@ public class Application {
         String name = sc.nextLine();
         System.out.print("부서 입력: ");
         String dept = sc.nextLine();
-        System.out.print("작급 입력: ");
+        System.out.print("직급 입력: ");
         String job = sc.nextLine();
         System.out.print("나이 입력: ");
         int age = sc.nextInt();
@@ -54,6 +54,7 @@ public class Application {
         System.out.println(employeeDTO.getGender());
         System.out.println(employeeDTO.getSalary());
         System.out.println(employeeDTO.getBonusPoint());
+        System.out.println(employeeDTO.getPhone());
         System.out.println(employeeDTO.getAddress());
 
 
