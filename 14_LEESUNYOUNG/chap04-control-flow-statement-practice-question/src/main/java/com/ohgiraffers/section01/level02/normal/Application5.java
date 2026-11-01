@@ -17,5 +17,19 @@ public class Application5 {
          *	application에 i가 존재하는 위치(인덱스) : 4 8
          *	i 개수 : 2
          * */
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("문자열 : ");
+        String str = sc.nextLine();
+        System.out.print("문자 : ");
+        char s = sc.nextLine().charAt(0);
+        int count =0;
+        for (int i = 0; i < str.length(); i++){
+            if(str.charAt(i) == s){
+                count++;
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println(s+ "개수" + count);
     }
 }

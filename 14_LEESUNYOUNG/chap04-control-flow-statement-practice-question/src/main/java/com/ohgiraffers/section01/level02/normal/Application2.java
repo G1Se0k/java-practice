@@ -15,6 +15,18 @@ public class Application2 {
          * -- 출력 예시 --
          * 990101-1******
          */
-
+        Scanner sc = new Scanner(System.in);
+        System.out.print("주민등록번호를 입력하세요 : ");
+        String num = sc.nextLine();
+        char[] carr = new char[num.length()];
+        for(int i=0; i<carr.length; i++){
+            carr[i] = num.charAt(i);
+            if(i >= 8){
+                carr[i] = '*';
+            }
+        }
+        for(int i=0; i< carr.length; i++){
+            System.out.print(carr[i]);
+        }
     }
 }

@@ -16,7 +16,19 @@ public class Application6 {
          * 치킨 이름을 입력하세요 : 양념     치킨 이름을 입력하세요 : 불닭
          * 양념치킨 배달 가능              불닭치킨은 없는 메뉴입니다.
          * */
-
+        Scanner sc = new Scanner(System.in);
+        System.out.print("치킨 이름을 입력하세요: ");
+        String str = sc.nextLine();
+        String[] sarr = {"양념치킨", "후라이드"};
+        boolean found = false;
+        for (int i=0; i<sarr.length; i++) {
+            if (sarr[i].equals(str)) {
+                System.out.println(sarr[i] + "배달 가능");
+                found = true;
+            }
+        }if (!found){
+            System.out.println(str+ "없는 메뉴입니다.");
+        }
 
     }
 }

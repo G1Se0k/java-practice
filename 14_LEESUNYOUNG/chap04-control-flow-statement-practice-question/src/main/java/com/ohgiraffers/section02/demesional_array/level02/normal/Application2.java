@@ -34,40 +34,38 @@ public class Application2 {
          * 김유신 이사부
          */
 
-        String student[] = {"홍길동", "이순신", "유관순", "윤봉길", "장영실", "임꺽정", "장보고", "이태백", "김정희", "대조영", "김유신", "이사부"};
-        String part1[][] = new String[3][2];
-        String part2[][] = new String[3][2];
+        String[] arr = { "홍길동", "이순신", "유관순", "윤봉길", "장영실", "임꺽정", "장보고", "이태백", "김정희", "대조영", "김유신", "이사부"};
+        String[][] first = new String[3][2];
+        String[][] second = new String[3][2];
 
-        int ctn = 0;
+        for(int i= 0; i< arr.length; i++ ) {
+            int localIndex = i % 6;
+            int row = localIndex / 2;
+            int col = localIndex % 2;
 
-        for(int i = 0; i < part1.length; i++) {
-            for(int j = 0; j < part1[i].length; j++) {
-                part1[i][j] = student[ctn];
-                ctn++;
+            if (i < 6) {
+                first[row][col] = arr[i];
+            } else {
+                second[row][col] = arr[i];
             }
         }
+        System.out.println(" == 1분단 ==");
 
-        for(int i = 0; i < part2.length; i++) {
-            for(int j = 0; j < part2[i].length; j++) {
-                part2[i][j] = student[ctn];
-                ctn++;
+        for(int row = 0; row < first.length; row++){
+            for (int col = 0; col <first[row].length; col++){
+                System.out.print(first[row][col] + " ");
             }
+            System.out.println();
         }
+        System.out.println(" == 2분단 ==");
 
-        System.out.println("== 1분단 ==");
-        for(int i = 0; i < part1.length; i++) {
-            for(int j = 0; j < part1[i].length; j++) {
-                System.out.print(part1[i][j] + "  ");
+        for(int row = 0; row < second.length; row++) {
+            for (int col = 0; col < second[row].length; col++) {
+
+                System.out.print(second[row][col] + " ");
             }
             System.out.println();
         }
 
-        System.out.println("== 2분단 ==");
-        for(int i = 0; i < part2.length; i++) {
-            for(int j = 0; j < part2[i].length; j++) {
-                System.out.print(part2[i][j] + "  ");
-            }
-            System.out.println();
-        }
     }
 }

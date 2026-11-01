@@ -19,6 +19,17 @@ public class Application1 {
 
         /* 문자열 클래스에서 제공하는 length(), charAt() */
 
-
+        Scanner sc = new Scanner(System.in);
+        System.out.print("문자열을 하나 입력하세요 : ");
+        String str = sc.nextLine();
+        System.out.print("문자를 하나 입력하세요 : ");
+        char s = sc.next().charAt(0);
+        int count = 0;
+        for(int i=0; i<str.length(); i++){
+            if(str.charAt(i) == s){
+                count++;
+            }
+        }
+        System.out.println(count);
     }
 }

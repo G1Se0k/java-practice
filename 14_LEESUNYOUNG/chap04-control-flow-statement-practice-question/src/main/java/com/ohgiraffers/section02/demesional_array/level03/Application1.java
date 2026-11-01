@@ -7,12 +7,12 @@ public class Application1 {
         int[][] arr = new int[4][4];
 
         Application1 app = new Application1();
-//        app.arrayTest1(arr);
+        app.arrayTest1(arr);
 //        app.arrayTest2(arr);
 //        app.arrayTest3(arr);
 //        app.arrayTest4(arr);
 //        app.arrayTest5(arr);
-        app.arrayTest6(arr);
+//        app.arrayTest6(arr);
         //app.arrayTest7(arr);
     }
 
@@ -25,15 +25,16 @@ public class Application1 {
      * @param arr
      */
     public void arrayTest1(int[][] arr) {
-
-        int k = 1;
-
-        for(int i = 0; i < arr.length; i++) {
-            for(int j = 0; j < arr[i].length; j++) {
-                arr[i][j] = k++;
+        int count = 1;
+        for(int i = 0; i< arr.length; i++){
+            System.out.println();
+            for(int j = 0; j < arr.length; j++){
+                arr[i][j] = count++;
+                System.out.print(arr[i][j] + " ");
             }
         }
-        print(arr);
+
+
     }
 
     /**

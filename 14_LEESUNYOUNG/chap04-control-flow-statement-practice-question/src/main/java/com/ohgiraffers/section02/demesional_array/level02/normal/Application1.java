@@ -27,48 +27,31 @@ public class Application1 {
          * W S S J
          * */
         Scanner sc = new Scanner(System.in);
-        char c = 'A';
-        int cols = 0;
-        int rows = 0;
+        Random random = new Random();
+        System.out.print("가로 행의 수를 입력하세요: ");
+        int row = sc.nextInt(); // 세로값
+        System.out.print("세로 열의 수를 입력하세요: ");
+        int col = sc.nextInt(); // 가로값
 
-        while(true) {
-            System.out.print("가로 행의 수를 입력하세요 : ");
-            cols = sc.nextInt();
-
-            if(cols < 1 || cols > 10){
-                System.out.println("반드시 1~10까지의 정수를 입력해야 합니다. 다시 입력하세요.");
-                System.out.println();
-            }else{
-                break;
-            }
-
+        while(1 > row || row > 10 ){
+            System.out.println("반드시 1~10까지의 정수를 입력해야 합니다. 다시 입력하세요.");
+            row = sc.nextInt();
+        }
+        while(1 > col || col > 10){
+            System.out.println("반드시 1~10까지의 정수를 입력해야 합니다. 다시 입력하세요.");
+            col = sc.nextInt();
         }
 
-        while(true) {
-            System.out.print("세로 열의 수를 입력하세요 : ");
-            rows = sc.nextInt();
-
-            if(rows < 1 || rows > 10){
-                System.out.println("반드시 1~10까지의 정수를 입력해야 합니다. 다시 입력하세요.");
-                System.out.println();
-            }else{
-                break;
-            }
-
-        }
-
-        char crr[][] = new char[rows][cols];
-
-        for(int i = 0; i < crr.length; i ++){
-            for(int j = 0; j < crr[i].length; j++){
-                Random r = new Random();
-                crr[i][j] = (char)(c + r.nextInt(26));
-
-                System.out.print(crr[i][j]);
-                System.out.print(" ");
-            }
+        char[][] arr = new char[row][col];
+        for(int i = 0; i<row; i++){
             System.out.println();
+            for(int j = 0; j<col; j++){
+                arr[i][j] = (char) ('A' + random.nextInt(26));
+                System.out.print(arr[i][j] + " ");
+            }
         }
+
+
 
     }
 }
