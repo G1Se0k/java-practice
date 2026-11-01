@@ -11,7 +11,7 @@ public class ProductController {
     int menu;
     {
         pro = new ProductDTO[10];
-    }a
+    }
     public void mainMenu(){
         do {
             System.out.println("===== 제품 관리 메뉴 =====");

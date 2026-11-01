@@ -53,6 +53,6 @@ public class Application5 {
             result = result + sum;
             System.out.println(result + " x 8 + " + count + " = " + (result * 8 + count));
         }
-
     }
+
 }
