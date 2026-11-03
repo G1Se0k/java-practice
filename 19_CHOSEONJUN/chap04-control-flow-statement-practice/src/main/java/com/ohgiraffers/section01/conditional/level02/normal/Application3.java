@@ -5,10 +5,7 @@ import java.util.Scanner;
 public class Application3 {
 
     public static void main(String[] args) {
-        test();
-    }
 
-    public static void question(){
         /* 임의의 숫자를 입력받아 해당 계절을 출력해주세요
          * 단, 1~12사이의 숫자가 아닌 값이 들어는것은 "잘못입력하셨습니다"를 출력
          * 계절 구분
@@ -21,34 +18,15 @@ public class Application3 {
          * 숫자를 입력하세요 : 1
          * 겨울
          * */
-
         Scanner sc = new Scanner(System.in);
-        System.out.print("\n계절을 입력 해주세요: ");
-        int input = sc.nextInt();
-        System.out.println();
-        if (input > 12 || 0 > input) {
-            System.out.println("잘못입력하셨습니다");
-        }
-        if (6 > input && input > 2) {
-            System.out.println("봄");
-        } else if (9 > input && input > 5) {
-            System.out.println("여름");
-        } else if (12 > input && input > 8) {
-            System.out.println("가을");
-        } else {
-            System.out.println("겨울");
-        }
-    }
-
-    public static void test() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("1~12 사이의 정수 입력: ");
+        System.out.print("1 ~ 12 사이의 정수 입력 : ");
         int num = sc.nextInt();
-        String season = ""; // 계절을 담을 변수 선언
+        String season = "";  // 계절을 담을 변수 선언
+
         switch (num) {
             case 12:
-            case 1:
-            case 2:
+            case  1:
+            case  2:
                 season = "겨울";
                 break;
             case 3:
@@ -61,7 +39,7 @@ public class Application3 {
             case 8:
                 season = "여름";
                 break;
-            case 9:
+            case  9:
             case 10:
             case 11:
                 season = "가을";
@@ -69,6 +47,8 @@ public class Application3 {
             default:
                 System.out.println("잘못된 값을 입력하셨습니다.");
         }
-        System.out.println(num + "월은 " + season + "입니다.");
+
+        if(!season.equals(""))
+            System.out.println(num + "월은 " + season + "입니다.");
     }
 }
