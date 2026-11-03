@@ -1,5 +1,7 @@
 package com.ohgiraffers.section01.level01.example;
 
+import com.sun.security.jgss.GSSUtil;
+
 public class ExampleTest {
 
     /*
@@ -45,4 +47,16 @@ public class ExampleTest {
      *
      * 틀렸습니다 정답은 2 입니다.
      * */
+
+    public void randomMathQuiz(int num1, int num2) {
+
+        if (num1 == num2) {
+            System.out.println("정답입니다!");
+        } else {
+            System.out.println("틀렸습니다 정답은 " + num2 + " 입니다.");
+        }
+
+    }
+
+
 }

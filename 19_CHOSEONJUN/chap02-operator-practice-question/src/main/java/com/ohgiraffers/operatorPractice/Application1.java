@@ -14,7 +14,7 @@ public class Application1 {
          *
          * 홀수
          * */
-        int ramdom = (int)(Math.random()* 8 + 1);
+        int ramdom = (int)(Math.random()* 9 + 1); // 1~ 9
         System.out.println("ramdom = " + ramdom);
         System.out.println((ramdom % 2 == 0)? "짝수다" : "홀수다");
     }

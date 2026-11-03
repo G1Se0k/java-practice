@@ -20,5 +20,22 @@ public class Application1 {
         System.out.println("곱하기 결과: " + (num1 * num2));
         System.out.println("나누기한 몫: " + (num1 / num2));
         System.out.println("나누기한 나머지: " + (num1 % num2));
+        test();
     }
+
+    public static void test() {
+        int first = 20, second = 30;
+        int plus = first + second;
+        int minus = first - second;
+        int multi = first * second;
+        int div = first / second;
+        int mod = first % second;
+        System.out.println("plus = " + plus);
+        System.out.println("minus = " + minus);
+        System.out.println("multi = " + multi);
+        System.out.println("div = " + div);
+        System.out.println("mod = " + mod);
+
+    }
+
 }

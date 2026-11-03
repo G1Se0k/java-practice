@@ -20,10 +20,29 @@ public class Application1 {
 
         /* 문자열 클래스에서 제공하는 length(), charAt() */
         Scanner sc = new Scanner(System.in);
+<<<<<<< HEAD
+        System.out.print("문자열을 하나 입력하세요 : ");
+        String str = sc.nextLine();
+        System.out.print("찾을 문자를 입력하세요: ");
+        char str2 = sc.nextLine().charAt(0);
+        char[] carr = new char[str.length()];
+        int count = 0;
+        for(int i = 0; i<str.length(); i++){
+            carr[i] = str.charAt(i);
+        }
+        for(int i = 0; i<str.length(); i++){
+            if (carr[i] == str2){
+                count++;
+            }
+        }
+        System.out.println(count);
+=======
         String s = sc.nextLine();
         char[] carr = new char[s.length()];
 
+>>>>>>> c85367464bc7af9540933cf30f6871f7ee618868
 
 
+        System.out.println(Arrays.toString(carr));
     }
 }

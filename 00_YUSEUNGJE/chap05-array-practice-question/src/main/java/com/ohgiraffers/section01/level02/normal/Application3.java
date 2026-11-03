@@ -24,6 +24,13 @@ public class Application3 {
          * -- 출력 예시 --
          * 양수 혹은 홀수만 입력해야 합니다.
          */
+        Scanner sc = new Scanner(System.in);
+        System.out.print("홀수인 양의 정수를 입력하세요 : ");
+        int num = sc.nextInt();
+        if (num <= 0 || num % 2 == 0){
+            System.out.println("양수 혹은 홀수만 입력해야 합니다.");
+        }else{
 
+        }
     }
 }
