@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Application5 {
 
+
     public static void main(String[] args) {
 
         /*
@@ -29,10 +30,10 @@ public class Application5 {
          *     123456789 x 8 + 9 = 987654321
          *
          * */
-
         Scanner sc = new Scanner(System.in);
         System.out.print("정수하나를 입력하세요 : ");
         int num = sc.nextInt();
+
         printNumberCoolness(num);
     }
 
@@ -49,7 +50,13 @@ public class Application5 {
         for (int count = 1; count <= num; count++) {
             printSpaces(space--);
             sum = sum * 10 + 1;
+            // 0 * 10 + 1 = 1
+            // 1 * 10 + 1 = 11
+            // 11 * 10 + 1 = 111
             result = result + sum;
+            // 1 = 0 + 1
+            // 12 = 1 + 11
+            // 123 = 12 + 111
             System.out.println(result + " x 8 + " + count + " = " + (result * 8 + count));
         }
     }

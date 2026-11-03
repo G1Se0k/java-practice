@@ -16,9 +16,15 @@ public class RandomMaker {
      * */
 
     public static String tossCoin() {
-    int random = (int) (Math.random() * 2);
+        int random = (int) (Math.random() * 2);
         System.out.println("random = " + random);
-        String str = (random == 0)? "앞면": "뒷면";
+        String str = (random == 0) ? "앞면" : "뒷면";
         return str;
+    }
+
+    public static String tosCoin2() {
+        int random = (int) (Math.random() * 2);
+        String result = (random == 0) ? "앞면" : "뒷면";
+        return result;
     }
 }

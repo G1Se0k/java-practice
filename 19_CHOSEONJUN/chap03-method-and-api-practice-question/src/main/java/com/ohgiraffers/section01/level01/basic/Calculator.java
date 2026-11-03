@@ -1,14 +1,23 @@
 package com.ohgiraffers.section01.level01.basic;
 
+import javax.swing.plaf.synth.SynthRadioButtonMenuItemUI;
+
 public class Calculator {
-    public void checkMethod() { System.out.println("메소드 호출 확인"); }
+    public void checkMethod() {
+        System.out.println("메소드 호출 확인");
+    }
+
     public String sumTwoNumber(int first, int second) {
-        return first + "과 " + second + "의 합은 " + (first+ second) + "입니다";
+        return first + "과 " + second + "의 합은 " + (first + second) + "입니다";
     }
+
     public String multiTwoNumber(int first, int second) {
-        return (first + "과 " + second + "의 곱은 " + (first * second)+ "입니다.");
+        return (first + "과 " + second + "의 곱은 " + (first * second) + "입니다.");
     }
-    public int multiTwoNumber2(int first, int second) { return (first * second);}
+
+    public int multiTwoNumber2(int first, int second) {
+        return (first * second);
+    }
 
     // 기능용 클래스
 
@@ -37,6 +46,25 @@ public class Calculator {
 
     // 출력의 내용은 "10과 20의 곱은 200입니다." 라는 문장을
     // 출력하는 기능
+
+    public void checkMethod2() {
+        System.out.println("메서드 호출 확인");
+    }
+
+    public String sumTwoNumber2(int first, int second) {
+        String result = Integer.toString(first + second);
+        return result;
+    }
+
+    public String multiTwoNumber22(int first, int second) {
+        String result = Integer.toString(first * second);
+        return result;
+    }
+
+    public Integer multiTwoNumber222(int first, int second) {
+        Integer result = first * second;
+        return result;
+    }
 
 
 }
