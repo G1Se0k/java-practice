@@ -1,5 +1,14 @@
 package com.ohgiraffers.api.hair.run;
 
+import com.ohgiraffers.api.hair.model.dto.User;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Objects;
+import java.util.StringTokenizer;
+
 public class App {
     public static void main(String[] args) {
         String data = """
@@ -105,5 +114,32 @@ public class App {
         99,Robin,Biernacki,rbiernacki2q@jalbum.net,Male,,2024-07-25,9:35,2016-08-09T04:25:59
         100,Aurie,Goodoune,agoodoune2r@bbb.org,Genderfluid,2000/11/19,2024-04-12,12:11,2010-07-13T02:29:19
         """;
+
+        StringTokenizer st = new StringTokenizer(data, "\n");
+        st.nextToken();
+        User[] users = new User[st.countTokens()];
+        System.out.println(st.countTokens());
+        int count = 0;
+        while(st.hasMoreTokens()){
+            String[] userInfo = st.nextToken().split(",");
+
+            int id = Integer.parseInt(userInfo[0]);
+            String firstName = userInfo[1];
+            String lastName = userInfo[2];
+            String email = userInfo[3];
+            String gender = userInfo[4];
+            LocalDate birthday;
+            if(Objects.equals(userInfo[5], ""))birthday = null;
+            else birthday = LocalDate.parse(userInfo[5], DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+            LocalDate reservation_date = LocalDate.parse(userInfo[6], DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+            LocalTime reservation_time = LocalTime.parse(userInfo[7], DateTimeFormatter.ofPattern("H:mm"));
+            LocalDateTime created_at = LocalDateTime.parse(userInfo[8]);
+
+            users[count++] = new User(id, firstName,lastName,email,gender,birthday,reservation_date,reservation_time,created_at);
+        }
+
+        for(User u : users){
+            System.out.println(u.toString());
+        }
     }
 }
