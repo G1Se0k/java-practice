@@ -11,15 +11,17 @@ public class Application1 {
          * 단, 1~10 사이의 정수가 아닌 경우 "반드시 1~10 사이의 정수를 입력해야 합니다." 를 출력하세요.
          * */
         Scanner sc = new Scanner(System.in);
-        while (true) {
-            System.out.print("1~10 사이의 정수 한개를 입력: ");
-            int input = sc.nextInt();
-            if (input > 10) {
-                System.out.println("1~10 사이의 정수가 아닌 경우 \"반드시 1~10 사이의 정수를 입력해야 합니다.");
-                continue;
+        System.out.print("1~10 사이의 정수를 입력하세요: ");
+        int num = sc.nextInt();
+        if (num > 0 && num <= 10) {
+            if (num % 2 == 0) {
+                System.out.println("짝수 입니다.");
+            } else {
+                System.out.println("홀수 입니다.");
             }
-            System.out.println((input % 2 == 0) ? "짝수다" : "홀수다");
-            break;
+        } else {
+            System.out.println("1~10 사이의 정수가 아닌 경우 \"반드시 1~10 사이의 정수를 입력해야 합니다.");
         }
+
     }
 }

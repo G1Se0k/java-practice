@@ -118,32 +118,51 @@ public class level3 {
     }
 
     public void multiply() {
+
         Scanner sc = new Scanner(System.in);
         System.out.print("정수하나를 입력하세요 : ");
         int num = sc.nextInt();
-//        for(int i = 9; i >= num; i--) {
-//            for(int j = 9; j <= num; j++) {
-//                System.out.print(j);
-//            }
-        for(int i = 1; i <= num; i++) {
-            for(int j = 1; j <= i; j++) {
-                System.out.print(j);
+
+        for (int i = 1; i <= num; i++) {
+
+            for (int s = 0; s < num - i; s++) {
+                System.out.print(" ");
             }
-            System.out.println(" x 8"+ " + " + i + " = " );
+
+                String a = "";
+                for (int j = 1; j <= i; j++) {
+                    a = a + j;
+                }
+
+            int number = Integer.parseInt(a);
+            int result = number * 8 + i;
+            System.out.println(a + " x 8 + " + i + " = " + result);
             }
+
+            System.out.println();
         }
 
+//        for (int i = 1; i <= num; i++) {
+//
+//            for (int k = 0; k < num - i; k++) {
+//                System.out.print(" ");
+//            }
+//
+//            int a = 0;
+//            for (int j = 1; j <= i; j++) {
+//                System.out.print(j);
+//                a = a * 10 + j;
+//            }
+//
+//            System.out.println(" x 8 + " + i + " = " + (a * 8 + i));
+//        }
 
-//        int result = n * 8 + m
 
-//        System.out.println( n +  "x" + "8" + "+" + m + "=" + result);
-//                          1 x 8 + 1 = 9
-//                *        12 x 8 + 2 = 98
-//                *       123 x 8 + 3 = 987
-//                *      1234 x 8 + 4 = 9876
-//                *     12345 x 8 + 5 = 98765
+
+
+
 
     }
-    
+
 
 

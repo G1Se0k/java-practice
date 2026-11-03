@@ -16,8 +16,9 @@ public class Application2 {
          * 홀수다.
          * */
         Scanner sc = new Scanner(System.in);
-        System.out.print("정수를 하나 입력하세요: ");
+        System.out.print("정수를 하나 입력하세요 : ");
         int input = sc.nextInt();
-        System.out.println((input % 2 ==0)? "짝수다" : "홀수다");
+        String result = (input % 2 == 0)? "짝수" : "홀수";
+        System.out.println("result = " + result);
     }
 }
