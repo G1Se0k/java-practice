@@ -44,6 +44,10 @@ public class BookManager {
         else System.out.println(book);
     }
     public void displayAll(){
+        if(bookList.isEmpty()){
+            System.out.println("출력할 도서가 없습니다.");
+            return;
+        }
         for(BookDTO b : bookList){
             System.out.println(b);
         }
