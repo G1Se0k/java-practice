@@ -14,4 +14,19 @@ public class RandomMaker {
      * 앞면
      *
      * */
+
+    public static String tossCoin() {
+
+        int randomInt = (int)(Math.random() * 2); // 0, 1
+
+        if (randomInt == 0) {
+            System.out.println("앞면");
+        } else {
+            System.out.println("뒷면");
+        }
+
+        return "";
+    }
+
+
 }

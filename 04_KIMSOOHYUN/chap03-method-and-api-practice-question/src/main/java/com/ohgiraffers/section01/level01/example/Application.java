@@ -12,13 +12,7 @@ public class Application {
 
         exam.evenOdd(first);
 
-        System.out.println("첫번째 숫자 : ");
-        int firstNumber = sc.nextInt();
-        System.out.println("두번째 숫자 : ");
-        int secondNumber = sc.nextInt();
-        exam.findMax(firstNumber, secondNumber);
-
-         /*
+        /*
     메소드명 : evenOdd(int value)
     반환형 : void
     사용자로부터 정수하나를 입력받아
@@ -30,12 +24,28 @@ public class Application {
     홀수입니다
     * */
 
+        System.out.println("\n"+"첫번째 숫자 : ");
+        int firstNumber = sc.nextInt();
+        System.out.println("두번째 숫자 : ");
+        int secondNumber = sc.nextInt();
+        exam.findMax(firstNumber, secondNumber);
+
         /*
          * 메소드명 : findMax(int first, int second)
          * 리턴타입 : void
          * 두 수중 더 큰수 찾기
          * 사용자로부터 정수 두개를 입력받아 더큰수를 출력
          * */
+
+        int n1 = (int) (Math.random() * 10);
+        int n2 = (int) (Math.random() * 10);
+        System.out.println("\n" + "\"" + n1+ " + " + n2 + " = ?\"" + " 뭘까");
+
+        int answer = sc.nextInt();      //num1
+        int result = n1 + n2;       //num2
+        exam.randomMathQuiz(answer, result);
+
+
 
         /*
          * 메소드명 randomMathQuiz(int num1, int num2)
