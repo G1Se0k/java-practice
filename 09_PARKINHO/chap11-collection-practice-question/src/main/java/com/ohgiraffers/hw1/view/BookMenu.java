@@ -9,6 +9,7 @@ public class BookMenu {
 
     private Scanner sc = new Scanner(System.in);
     private BookManager bm = new BookManager();
+    private int nextBookNo = 1;
 
     public BookMenu() {
     }
@@ -36,21 +37,31 @@ public class BookMenu {
                 break;
             case 3:
                 System.out.print("삭제할 도서번호를 입력하세요 : ");
+                bm.deleteBook(sc.nextInt());
+                break;
+            case 4:
+                System.out.print("검색할 도서의 이름을 입력하세요 : ");
+                bm.printBook(bm.searchBook(sc.next()));
+                break;
+            case 5:
+                System.out.println("전체 도서를 출력합니다");
+                bm.displayAll();
+                break;
+            case 6:
+                System.out.println("프로그램을 종료합니다");
+                break;
+            default:
+                System.out.println("잘못 입력하셨습니다");
+
         }
-
-
-        bm.addBook(inputBook());
-        System.out.print("");
-        bm.sortedBookList()
-
 
     }
 
     public BookDTO inputBook() {
         BookDTO book = new BookDTO();
 
-        System.out.print("추가하실 도서의 번호를 입력하세요 : ");
-        book.setbNo(sc.nextInt());
+        book.setbNo(nextBookNo);
+        nextBookNo++;
         System.out.print("추가하실 도서의 제목을 입력하세요 : ");
         book.setTitle(inputBookTitle());
         System.out.print("추가하실 도서의 장르를 입력하세요(1:인문 / 2:자연과학 / 3:의료 / 4:기타) : ");

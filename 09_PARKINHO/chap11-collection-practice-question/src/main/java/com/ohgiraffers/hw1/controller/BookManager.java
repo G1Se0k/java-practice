@@ -1,5 +1,6 @@
 package com.ohgiraffers.hw1.controller;
 
+import com.ohgiraffers.hw1.model.comparator.AscCategory;
 import com.ohgiraffers.hw1.model.dto.BookDTO;
 
 import java.util.ArrayList;
@@ -16,15 +17,14 @@ public class BookManager {
     }
 
     public void deleteBook(int index) {
-        bookList.remove(index);
-        bookList.get(index).getbNo();
         for (int i = 0;i<bookList.size();i++) {
-            if (bookList.get(i).getbNo() == bookList.get(index).getbNo()) {
+            if (bookList.get(i).getbNo() == index) {
                 System.out.println(bookList.get(i).toString());
-                System.out.print("해당 도서를 삭제하시겠습니까?");
-                switch () {}
+                bookList.remove(i);
+                return;
             }
         }
+        System.out.println("삭제할 도서가 존재하지 않습니다");
 
     }
 
@@ -34,7 +34,7 @@ public class BookManager {
                 return i;
             }
         }
-        System.out.println("조회한 도서가 존재하지 않음");
+        System.out.println("조회한 도서가 존재하지 않습니다");
         return -1;
     }
 
@@ -54,6 +54,12 @@ public class BookManager {
     }
 
     public ArrayList<BookDTO> sortedBookList(int select) {
+        if(select == 1) {
+
+            bookList.sort(new AscCategory());
+
+
+        }
         return null;
     }
 
