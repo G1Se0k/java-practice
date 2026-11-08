@@ -13,7 +13,12 @@ public class BookManager {
     }
 
     public void addBook(BookDTO book) {
-        bookList.add(book);
+        try {
+            bookList.add(book);
+        } catch (NullPointerException e) {
+            System.out.println("도서 정보가 제대로 전달되지 않았습니다");
+
+        }
     }
 
     public void deleteBook(int index) {

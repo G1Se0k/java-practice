@@ -17,7 +17,7 @@ public class BookMenu {
     public void menu() {
 
         System.out.print("""
-                ==== 도서 관리 프로그램 ====
+                ===== 도서 관리 프로그램 =====
                 1. 새 도서 추가
                 2. 도서 정보 정렬 후 출력
                 3. 도서 삭제
@@ -65,14 +65,15 @@ public class BookMenu {
         System.out.print("추가하실 도서의 제목을 입력하세요 : ");
         book.setTitle(inputBookTitle());
         System.out.print("추가하실 도서의 장르를 입력하세요(1:인문 / 2:자연과학 / 3:의료 / 4:기타) : ");
+        int categoryIndex = sc.nextInt();
         boolean state = true;
         while (state) {
-            switch (sc.nextInt()) {
+            switch (categoryIndex) {
                 case 1:
                 case 2:
                 case 3:
                 case 4:
-                    book.setCategory(sc.nextInt());
+                    book.setCategory(categoryIndex);
                     state = false;
                     break;
                 default:
